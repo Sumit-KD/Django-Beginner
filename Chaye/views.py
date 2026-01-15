@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def all_chai(request):
-    return render(request,'Chaye/all_Chaye.html')
+    return render(request, 'Chaye/all_Chaye.html')

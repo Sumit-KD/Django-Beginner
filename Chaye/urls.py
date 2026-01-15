@@ -1,8 +1,8 @@
 
-from django.urls import path,include
-from . import views
+from django.urls import path
+from .  import views
 
-urlpatterns = {
-    path('Chaye/',views.all_chai,name='all'),
-}
+urlpatterns = [
+    path('',views.all_chai,name='all_chai'),
 
+]

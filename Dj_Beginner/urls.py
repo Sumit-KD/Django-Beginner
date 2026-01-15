@@ -1,16 +1,12 @@
-"""
-"""
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('home/',views.home,name='home'),
-    path('about/',views.about,name='about'),
-    path('contact/',views.contact,name='contact'),
-    path('Chaye/',include('Chaye.urls'))
-
-
-
+    path('admin/', admin.site.urls),   # admin should ALWAYS be here
+    path('', views.home, name='home'), # homepage
+    path('home/', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('Chaye/', include('Chaye.urls') ),
 ]
