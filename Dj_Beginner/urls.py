@@ -3,7 +3,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),   # admin should ALWAYS be here
+    path('admin/', admin.site.urls),   # admin should ALWAYS be here::usernmae:Sumit and PD-->@sum11
     path('', views.home, name='home'), # homepage
     path('home/', views.home, name='home'),
     path('about/', views.about, name='about'),
