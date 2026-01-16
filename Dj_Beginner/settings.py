@@ -28,11 +28,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Chaye',
-    'tailwind',
-    'theme',
+    'tailwind', #setup tailwind
+    'theme', #setup tailwind
+    'django_browser_reload', #setup for Hot Reloading on browser
 ]
-TAILWIND_APP_NAME='theme'
-INTERNAL_IPS = ['127.0.0.1']
+TAILWIND_APP_NAME='theme'     #setup tailwind
+INTERNAL_IPS = ['127.0.0.1']   #setup tailwind
+NPM_BIN_PATH='/usr/bin/npm'     #setup tailwind
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -42,6 +44,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
+    'django_browser_reload.middleware.BrowserReloadMiddleware',  #setup for hot reload
 ]
 
 ROOT_URLCONF = 'Dj_Beginner.urls'

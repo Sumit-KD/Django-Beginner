@@ -8,9 +8,13 @@
     --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-green-400: oklch(79.2% 0.209 151.711);
     --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
+    --spacing: 0.25rem;
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --tracking-normal: 0em;
@@ -204,6 +208,9 @@
   .h-screen {
     height: 100vh;
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -223,8 +230,20 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
+  .bg-gray-500 {
+    background-color: var(--color-gray-500);
+  }
+  .bg-green-400 {
+    background-color: var(--color-green-400);
+  }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
