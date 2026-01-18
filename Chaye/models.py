@@ -21,3 +21,11 @@ class Chaivarity(models.Model):
     type=models.CharField(max_length=2,choices=CHAI_TYPE_CHOICE)
 
 
+    def __str__(self)->str:
+        return self.name #to see name description in admin panel
+
+
+
+
+
+
