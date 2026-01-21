@@ -53,7 +53,7 @@ class Store(models.Model):
 
     #c.One to One---> for one unique thing is for other it's related unique field
 
-class Certificate(models.Model):
+class Chai_Certificate(models.Model):
         chai=models.OneToOneField(Chaivarity,on_delete=models.CASCADE,related_name='certificate')
         certificate_no=models.CharField(max_length=100)
         issue_date=models.DateTimeField(default=timezone.now)
