@@ -3,6 +3,7 @@ from .models import Chaivarity
 from django.shortcuts import get_object_or_404
 
 
+
 # Create your views here.
 
 def all_chai(request):
@@ -12,6 +13,10 @@ def all_chai(request):
 def chai_details(request ,chai_id):
     chai=get_object_or_404(Chaivarity,pk=chai_id)
     return render(request,'Chaye/chai_detail.html',{'chai':chai})
+
+def chai_store_view(request):
+    return render(request,'Chaye/chai_stores.html')
+
 
 
 
