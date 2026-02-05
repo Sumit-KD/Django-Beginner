@@ -1,6 +1,7 @@
 {% load static tailwind_tags %}
 {% load static %}
 
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,13 +22,13 @@
 
             <!-- Logo -->
             <div class="text-xl font-bold">
-                ~ROYALS-CHIYA~
+                ~ROYALS CHIYA~
             </div>
 
             <!-- Navigation Links -->
             <nav>
                 <ul class="flex space-x-6 font-medium">
-                    <li><a href="/" class="hover:text-sky-400">Home</a></li>
+                    <li><a href="{% url 'all_chai' %}" class="hover:text-sky-400">Home</a></li>
                     <li><a href="/categories/" class="hover:text-sky-400">Categories</a></li>
                     <li><a href="/location/" class="hover:text-sky-400">Location</a></li>
                 </ul>
