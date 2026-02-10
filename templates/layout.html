@@ -1,7 +1,6 @@
 {% load static tailwind_tags %}
 {% load static %}
 
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,16 +11,77 @@
     </title>
 
     {% tailwind_css %}
+
+    <!-- Blob Animation Styles -->
+    <style>
+        .blob-container {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            background: #020617;
+        }
+
+        .blob {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle at 30% 30%, #38bdf8, #0ea5e9, #0284c7);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.55;
+            animation: float 22s infinite alternate ease-in-out;
+        }
+
+        .blob:nth-child(1) {
+            top: -10%;
+            left: -10%;
+            animation-duration: 26s;
+        }
+
+        .blob:nth-child(2) {
+            top: 30%;
+            right: -15%;
+            background: radial-gradient(circle at 30% 30%, #a855f7, #7c3aed);
+            animation-duration: 30s;
+        }
+
+        .blob:nth-child(3) {
+            bottom: -20%;
+            left: 20%;
+            background: radial-gradient(circle at 30% 30%, #22d3ee, #06b6d4);
+            animation-duration: 34s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(120px, -80px) scale(1.15);
+            }
+            100% {
+                transform: translate(-80px, 100px) scale(0.95);
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-gray-100 flex flex-col min-h-screen">
+<body class="bg-transparent flex flex-col min-h-screen">
+
+    <!-- Blob Background -->
+    <div class="blob-container">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
 
     <!-- Header / Navbar -->
-    <header class="bg-slate-900 text-white px-6 py-4 search-label-icon">
+    <header class="bg-slate-900/80 backdrop-blur-md text-white px-6 py-4 search-label-icon">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
 
             <!-- Logo -->
-            <div class="text-xl font-bold">
+            <div class="text-white font-bold">
                 ~ROYALS CHIYA~
             </div>
 
@@ -40,13 +100,13 @@
                     type="text"
                     name="q"
                     placeholder="Search..."
-                    class="px-3 py-1 rounded-l-md text-white focus:outline search-label-icon"
+                    class="px-3 py-1 rounded-l-md text-white bg-slate-800 focus:outline search-label-icon"
                 >
                 <button
                     type="submit"
                     class="bg-sky-400 px-4 py-1 rounded-r-md text-black font-medium hover:bg-sky-500"
                 >
-                        Search
+                    Search
                 </button>
             </form>
 
@@ -60,7 +120,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white text-center py-4 ">
+    <footer class="bg-slate-900/80 backdrop-blur-md text-white text-center py-4">
         <p class="text-sm">
             © 2026 MyProject • All Rights Reserved
         </p>
